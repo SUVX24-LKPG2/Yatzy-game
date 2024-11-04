@@ -76,7 +76,7 @@ class Yatzy
                 if (reroll == 'y' || reroll == 'Y')
                 {
                     rerollSelectedDice(dice);
-                displayDice(dice);
+                    displayDice(dice);
                 }
                 if(checkYatzy(dice)) {
                   cout << "Yatzyyyyyy" << endl;
@@ -171,8 +171,6 @@ class Yatzy
             for (int count : counts) if (count >= 5) score = 50;
 
         }
-        // Implementera fler kategorier...
-
         return score;
     }
 
