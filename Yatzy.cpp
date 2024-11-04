@@ -83,7 +83,14 @@ class Yatzy
 
    }
 };
+
+void runGame(bool& gameIsRunning)
+{
+    gameIsRunning = false;
+}
+
 int main(){
+    bool gameIsRunning = true;
     Yatzy game;
     printMainMenu();
     game.dicerolling();
