@@ -34,6 +34,17 @@ void printMainMenu()
     //I got help from Geeks4Geeks to solve this 
 }  
 
+bool checkYatzy (const vector<int>& dice) {
+   int firstValue = dice[0];
+   for (int i = 1; i < 5; i++) {
+      if (dice[i] != firstValue) {
+         return false; // if there is no yatzy
+      }
+   }
+   return true; //if all dice value matches
+}
+
+
 class Yatzy
 {
    public:
@@ -45,12 +56,18 @@ class Yatzy
 
         rollAllDice(dice);
         displayDice(dice);
+        if(checkYatzy (dice)) {
+         cout << "Yatzyyyyyyy" << endl;
+        }
         while(reroll == 'y' || reroll == 'Y'){  
             cout << "Do u want to reroll specific dice? (y/n): " << endl;
             cin >> reroll;
             if (reroll == 'y' || reroll == 'Y'){
                 rerollSelectedDice(dice);
                 displayDice(dice);
+                if(checkYatzy(dice)) {
+                  cout << "Yatzyyyyyy" << endl;
+                }
             }
         }
    }
@@ -67,7 +84,7 @@ class Yatzy
         cout << endl;
    }
    void rerollSelectedDice(vector<int> & dice){
-        int rollNumber;
+        int rollNumber; 
         cout << "Enter the dice number (1-5) you want to reroll, separated by spaces (0 to finnish): ";
         while (true)
         {
@@ -79,10 +96,11 @@ class Yatzy
                     cout << "Invalid dice number. Please enter a number between 1 and 5" << endl;
             }
         }
-    
 
    }
 };
+
+
 
 void runGame(bool& gameIsRunning)
 {
