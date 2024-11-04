@@ -73,16 +73,17 @@ class Yatzy
             while((reroll == 'y' || reroll == 'Y') && diceroll < 3){  
                 cout << "Do u want to reroll specific dice? (y/n): " << endl;
                 cin >> reroll;
-                if (reroll == 'y' || reroll == 'Y'){
+                if (reroll == 'y' || reroll == 'Y')
+                {
                     rerollSelectedDice(dice);
                 displayDice(dice);
+                }
                 if(checkYatzy(dice)) {
                   cout << "Yatzyyyyyy" << endl;
                 }
-                rerollSelectedDice(dice); // Re-roll chosen dice
-                    displayDice(dice);   // Display updated results
+                
                     diceroll++;
-                }
+            
             }  
         registerScore(dice); // Register the score for the current round
    }
