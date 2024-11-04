@@ -95,8 +95,7 @@ class Yatzy
    void rerollSelectedDice(vector<int> & dice){
         int rollNumber; 
         cout << "Enter the dice number (1-5) you want to reroll, separated by spaces (0 to finnish): ";
-        int rollNumber;
-        cout << "Enter the dice number (1-5) you want to reroll, separated by spaces (0 to finish): ";
+        
         // Continue until the user enters 0, which stops re-rolling
         while (true)
         {
