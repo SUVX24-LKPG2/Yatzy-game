@@ -42,6 +42,16 @@ class Category
     bool used;
 };
 
+bool checkYatzy(const vector<int>& dice) {
+   int firstValue = dice[0];
+   for (int i = 0; i < 5; i++){
+      if (dice[i] != firstValue){
+      return false; //if the dices are not the same
+      }
+   }
+   return true; //All the dices have the same value
+}
+
 // Class representing the Yatzy game
 class Yatzy
 {
@@ -57,14 +67,19 @@ class Yatzy
     // Roll all dice and display the results
         rollAllDice(dice);
         displayDice(dice);
-        //if(diceroll <3)
-        //{
-            // Ask the user if they want to re-roll specific dice
+        if(checkYatzy (dice)) {
+            cout << "Yatzyyyyyyy" << endl;
+        }
             while((reroll == 'y' || reroll == 'Y') && diceroll < 3){  
                 cout << "Do u want to reroll specific dice? (y/n): " << endl;
                 cin >> reroll;
                 if (reroll == 'y' || reroll == 'Y'){
-                    rerollSelectedDice(dice); // Re-roll chosen dice
+                    rerollSelectedDice(dice);
+                displayDice(dice);
+                if(checkYatzy(dice)) {
+                  cout << "Yatzyyyyyy" << endl;
+                }
+                rerollSelectedDice(dice); // Re-roll chosen dice
                     displayDice(dice);   // Display updated results
                     diceroll++;
                 }
@@ -90,10 +105,10 @@ class Yatzy
    }
 
     // Re-rolls specific dice chosen by the user
-   void rerollSelectedDice(vector<int> & dice)
-   {
-        int rollNumber;
-        cout << "Enter the dice number (1-5) you want to reroll, separated by spaces (0 to finish): ";
+   void rerollSelectedDice(vector<int> & dice){
+        int rollNumber; 
+        cout << "Enter the dice number (1-5) you want to reroll, separated by spaces (0 to finnish): ";
+        
         // Continue until the user enters 0, which stops re-rolling
         while (true)
         {
@@ -186,6 +201,8 @@ class Yatzy
 
     }
 };
+
+
 
 void runGame(bool& gameIsRunning)
 {
