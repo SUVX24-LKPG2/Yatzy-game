@@ -1,0 +1,14 @@
+#ignore all .exe files
+*.exe
+
+#ignore .vscode folder
+*vscode/
+
+#ignore Yatzy.dSYM folder
+*Yatzy.dSYM/
+
+#ignore Yatzy file
+*Yatzy
+
+
+
