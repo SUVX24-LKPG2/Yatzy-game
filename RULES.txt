@@ -1,0 +1,30 @@
+Objective
+Score the most points by rolling five dice to achieve specific combinations. Each combination can only be used once per game.
+
+How to Play
+Roll Dice: On your turn, roll five dice up to three times. After each roll, choose which dice to keep and which to re-roll.
+
+Choose a Category: After rolling, pick a category on your scorecard to score that turn. Once a category is used, it cannot be reused.
+Scoring Categories
+
+Upper Section: Score based on the number (e.g., Ones, Twos, etc.). Earn a 35-point bonus if the upper section totals 63 or more.
+
+Lower Section: Score specific combinations:
+
+Three/Four of a Kind: Sum all dice.
+
+Full House: Three of one number, two of another (25 points).
+
+Small Straight (1-2-3-4 or 2-3-4-5): 30 points.
+
+Large Straight (1-2-3-4-5 or 2-3-4-5-6): 40 points.
+
+Yatzy (Five of a Kind): 50 points.
+
+Chance: Sum all dice (use for any roll).
+
+Winning
+After all 13 categories are filled, the highest total score wins. Enjoy!
+
+
+
