@@ -94,7 +94,14 @@ class Yatzy
 
    }
 };
+
+void runGame(bool& gameIsRunning)
+{
+    gameIsRunning = false;
+}
+
 int main(){
+
     int choosemenu;
     do{ /// Display the menu and let the user make a selection
     cout << "Play Yatzy, menu: " << endl;
@@ -125,5 +132,6 @@ int main(){
         
     }while(choosemenu != 3); // Continue until the user chooses to quit
    
+
     return 0;
 }
